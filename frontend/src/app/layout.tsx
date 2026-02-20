@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://andrewbaisden.com"),
+  alternates: {
+    canonical: "https://andrewbaisden.com/",
+  },
   title: "Andrew Baisden - Portfolio",
   description: "Andrew Baisden, born and raised in London, England, is an accomplished Software Developer, Content Creator, and Technical Writer. Proficient in JavaScript and React, Andrew excels in developing user-friendly and captivating applications.",
   keywords: [
