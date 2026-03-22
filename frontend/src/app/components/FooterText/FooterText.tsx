@@ -29,7 +29,7 @@ export const FooterText = ({ ...props }: FooterTextProps) => {
           </a>
         </div>
         <p>
-          This website was designed in&nbsp;
+          Crafted in{' '}
           <a
             href="https://www.figma.com/"
             target="_blank"
@@ -37,28 +37,30 @@ export const FooterText = ({ ...props }: FooterTextProps) => {
             className={
               activeTheme === 'light'
                 ? 'footer-text-link-light-theme'
-                : 'footer-text-link-light-theme'
+                : 'footer-text-link-dark-theme'
             }
           >
             Figma
           </a>
-          &nbsp;and built using&nbsp;
+          {' '}
+          and shipped with{' '}
           <a
-            href="https://reactjs.org/"
+            href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
             className={
               activeTheme === 'light'
                 ? 'footer-text-link-light-theme'
-                : 'footer-text-link-light-theme'
+                : 'footer-text-link-dark-theme'
             }
           >
-            React
+            Next.js
           </a>
-          &nbsp;by Andrew Baisden.
+          {' '}
+          — Md Shajidur Rahman Almazee.
         </p>
         <p>
-          All Rights Reserved &reg; Copyright &copy; {currYear} Andrew Baisden.
+          &copy; {currYear} Md Shajidur Rahman Almazee. All rights reserved.
         </p>
       </div>
     </>

@@ -7,6 +7,7 @@ import Image from 'next/image'
 interface Headerprops {
   homeRef: any;
   aboutRef: any;
+  experienceRef: any;
   scoialMediaRef: any;
   skillsRef: any;
   contactRef: any;
@@ -14,6 +15,7 @@ interface Headerprops {
 
 export const Header = ({
   aboutRef,
+  experienceRef,
   scoialMediaRef,
   skillsRef,
   contactRef,
@@ -34,15 +36,6 @@ export const Header = ({
       <div className="header-desktop">
         <section>
           <div>
-            <a
-              href="#home"
-              rel="noopener noreferrer"
-              onClick={() => {
-                handleScroll(homeRef.current);
-              }}
-            >
-              <Image src={Logo} alt="Andrew Baisden Logo" />
-            </a>
           </div>
           <div className="navigation">
             <nav>
@@ -63,6 +56,15 @@ export const Header = ({
                 }}
               >
                 About
+              </a>
+              <a
+                href="#experience"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  handleScroll(experienceRef.current);
+                }}
+              >
+                Experience
               </a>
               <a
                 href="#socialmedia"
@@ -107,7 +109,7 @@ export const Header = ({
               handleScroll(homeRef.current);
             }}
           >
-            <Image src={Logo} alt="Andrew Baisden Logo" />
+            <Image src={Logo} alt="Shajidur Rahman Logo" />
           </a>
         </div>
         <div>
@@ -133,7 +135,7 @@ export const Header = ({
                   handleScroll(homeRef.current);
                 }}
               >
-                <img src={Logo} alt="Andrew Baisden Logo" />
+                <img src={Logo} alt="Shajidur Rahman Logo" />
               </a>
             </div>
             <ul>

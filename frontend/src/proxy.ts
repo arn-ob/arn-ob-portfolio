@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const CANONICAL_HOST = "andrewbaisden.com";
-const WWW_HOST = "www.andrewbaisden.com";
+const CANONICAL_HOST = "arn-ob.com";
+const WWW_HOST = "www.arn-ob.com";
 
 const normalizePath = (pathname: string): string => {
   if (pathname !== "/" && pathname.endsWith("/")) {

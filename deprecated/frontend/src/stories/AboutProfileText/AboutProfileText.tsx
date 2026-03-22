@@ -9,7 +9,7 @@ export const AboutProfileText = ({ ...props }: AboutProfileTextProps) => {
       <article className="about-profile-text">
         <p>Hey there you super awesome person!</p>
         <p>
-          My name is Andrew, and I am a Software Developer from London, England.
+          My name is Shajidur Rahman, and I am a Software Developer from London, England.
         </p>
         <p>
           I work as a Software Developer using the JavaScript and Python

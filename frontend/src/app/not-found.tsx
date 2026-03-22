@@ -34,7 +34,7 @@ export default function NotFound() {
       <header className="not-found-header">
         <section className="not-found-header-inner">
           <a href="/" aria-label="Go to homepage" className="not-found-logo-link">
-            <Image src={Logo} alt="Andrew Baisden Logo" />
+            <Image src={Logo} alt="Shajidur Rahman Logo" />
           </a>
           <div className="not-found-nav-wrap">
             <nav className="not-found-nav">

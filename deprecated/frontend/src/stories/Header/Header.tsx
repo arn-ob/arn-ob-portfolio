@@ -6,26 +6,26 @@ import './Header.css';
 interface Headerprops {
   homeRef: any;
   aboutRef: any;
-  scoialMediaRef: any;
+  socialMediaRef: any;
   skillsRef: any;
   contactRef: any;
 }
 
 export const Header = ({
   aboutRef,
-  scoialMediaRef,
+  socialMediaRef,
   skillsRef,
   contactRef,
   homeRef,
   ...props
 }: Headerprops) => {
-  const handleScroll = (ref: any): void => {
+  const handleScroll = (el: HTMLElement | null): void => {
+    if (!el) return;
     window.scrollTo({
-      top: ref.offsetTop,
+      top: el.offsetTop,
       left: 0,
       behavior: 'smooth',
     });
-    console.log('change page');
   };
 
   return (
@@ -36,11 +36,12 @@ export const Header = ({
             <a
               href="#home"
               rel="noopener noreferrer"
-              onClick={() => {
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
                 handleScroll(homeRef.current);
               }}
             >
-              <img src={Logo} alt="Andrew Baisden Logo" />
+              <img src={Logo} alt="Shajidur Rahman Logo" />
             </a>
           </div>
           <div className="navigation">
@@ -48,7 +49,8 @@ export const Header = ({
               <a
                 href="#home"
                 rel="noopener noreferrer"
-                onClick={() => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
                   handleScroll(homeRef.current);
                 }}
               >
@@ -57,7 +59,8 @@ export const Header = ({
               <a
                 href="#about"
                 rel="noopener noreferrer"
-                onClick={() => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
                   handleScroll(aboutRef.current);
                 }}
               >
@@ -66,8 +69,9 @@ export const Header = ({
               <a
                 href="#socialmedia"
                 rel="noopener noreferrer"
-                onClick={() => {
-                  handleScroll(scoialMediaRef.current);
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
+                  handleScroll(socialMediaRef.current);
                 }}
               >
                 Social Media
@@ -75,7 +79,8 @@ export const Header = ({
               <a
                 href="#skills"
                 rel="noopener noreferrer"
-                onClick={() => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
                   handleScroll(skillsRef.current);
                 }}
               >
@@ -84,7 +89,8 @@ export const Header = ({
               <a
                 href="#contact"
                 rel="noopener noreferrer"
-                onClick={() => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
                   handleScroll(contactRef.current);
                 }}
               >
@@ -102,104 +108,18 @@ export const Header = ({
           <a
             href="#home"
             rel="noopener noreferrer"
-            onClick={() => {
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.preventDefault();
               handleScroll(homeRef.current);
             }}
           >
-            <img src={Logo} alt="Andrew Baisden Logo" />
+            <img src={Logo} alt="Shajidur Rahman Logo" />
           </a>
         </div>
         <div>
           <ThemeToggle />
         </div>
       </div>
-      {/* <div className="header-mobile">
-        <header>
-          <input id="burger" type="checkbox" />
-
-          <label htmlFor="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-
-          <nav>
-            <div className="logo-theme-toggle">
-              <a
-                href="#home"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  handleScroll(homeRef.current);
-                }}
-              >
-                <img src={Logo} alt="Andrew Baisden Logo" />
-              </a>
-            </div>
-            <ul>
-              <li>
-                <div>
-                  <ThemeToggle />
-                </div>
-              </li>
-              <li>
-                <a
-                  href="#home"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleScroll(homeRef.current);
-                  }}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleScroll(aboutRef.current);
-                  }}
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#socialmedia"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleScroll(scoialMediaRef.current);
-                  }}
-                >
-                  Social Media
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleScroll(skillsRef.current);
-                  }}
-                >
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    handleScroll(contactRef.current);
-                  }}
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div> */}
     </>
   );
 };

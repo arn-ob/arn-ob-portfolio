@@ -17,7 +17,7 @@ const App = () => {
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
-  const scoialMediaRef = useRef(null);
+  const socialMediaRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -31,7 +31,7 @@ const App = () => {
               <Header
                 homeRef={homeRef}
                 aboutRef={aboutRef}
-                scoialMediaRef={scoialMediaRef}
+                socialMediaRef={socialMediaRef}
                 skillsRef={skillsRef}
                 contactRef={contactRef}
               />
@@ -70,7 +70,7 @@ const App = () => {
                 </div>
               </section>
             </div>
-            <div ref={scoialMediaRef}>
+            <div ref={socialMediaRef}>
               <section className="header-section">
                 <a
                   href="/#socialmedia"

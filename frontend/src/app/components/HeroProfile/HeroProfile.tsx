@@ -1,5 +1,5 @@
 import Typewriter from 'typewriter-effect';
-import profilePictureHero from '../../img/profile-picture.png';
+import profilePictureHero from '../../img/arnob.jpg';
 import './HeroProfile.css';
 import Image from 'next/image';
 
@@ -15,29 +15,31 @@ export const HeroProfile = ({ ...props }: HeroProfileprops) => {
         <div className="hero-profile">
           <Image
             src={profilePictureHero}
-            alt="Andrew Baisden Profile"
+            alt="Shajidur Rahman Profile"
             width={100}
             height={100}
           />
           <p>Hey there I'm,</p>
-          <h1>Andrew Baisden</h1>
+          <h1>Shajidur Rahman</h1>
           <Typewriter
             options={{
               strings: [
+                'DevOps Engineer',
+                'Site Reliability Engineer',
                 'Software Developer',
                 'Technical Writer',
                 'Content Creator',
-                'Gamer',
               ],
               autoStart: true,
               loop: true,
             }}
           />
           <p className="hero-profile-tagline">
-            What I excel at is creating software, websites, apps, and writing.
+            DevOps, SRE and SWE: cloud, Kubernetes, CI/CD—and clear writing on the
+            stack.
           </p>
-          <a
-            href="https://linktr.ee/andrewbaisden"
+          {/* <a
+            href="https://linktr.ee/shajidurrahman"
             target="_blank"
             rel="noopener noreferrer"
             style={{ fontWeight: 'bold' }}
@@ -48,7 +50,7 @@ export const HeroProfile = ({ ...props }: HeroProfileprops) => {
             }
           >
             Find me on social media
-          </a>
+          </a> */}
         </div>
       </div>
     </>

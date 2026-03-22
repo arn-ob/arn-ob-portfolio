@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andrewbaisden.com/sitemap.xml
+Sitemap: https://shajidurrahman.com/sitemap.xml

@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import HeroProfile from './components/HeroProfile/HeroProfile';
 import AboutProfileText from './components/AboutProfileText/AboutProfileText';
 import AboutProfileImage from './components/AboutProfileImage/AboutProfileImage';
+import Experience from './components/Experience/Experience';
 import SocialMediaCarousel from './components/SocialMediaCarousel/SocialMediaCarousel';
 import SkillGroupIcons from './components/SkillGroupIcons/SkillGroupIcons';
 import ContactText from './components/ContactText/ContactText';
@@ -18,6 +19,7 @@ const Home = () => {
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
   const scoialMediaRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
@@ -32,6 +34,7 @@ const Home = () => {
               <Header
                 homeRef={homeRef}
                 aboutRef={aboutRef}
+                experienceRef={experienceRef}
                 scoialMediaRef={scoialMediaRef}
                 skillsRef={skillsRef}
                 contactRef={contactRef}
@@ -64,6 +67,9 @@ const Home = () => {
                   <AboutProfileImage />
                 </div>
               </section>
+            </div>
+            <div ref={experienceRef}>
+              <Experience />
             </div>
             <div ref={scoialMediaRef}>
               <section className="header-section">
@@ -121,7 +127,7 @@ const Home = () => {
             </div>
           </main>
           {/* <footer className={activeTheme === 'light' ? 'footer-light-theme' : 'footer-dark-theme'}> */}
-          <footer
+          {/* <footer
             className={
               activeTheme === 'light'
                 ? 'footer-light-theme'
@@ -129,7 +135,7 @@ const Home = () => {
             }
           >
             <FooterText />
-          </footer>
+          </footer> */}
         </div>
       </div>
     </>

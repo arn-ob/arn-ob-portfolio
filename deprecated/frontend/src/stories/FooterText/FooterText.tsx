@@ -54,10 +54,10 @@ export const FooterText = ({ ...props }: FooterTextProps) => {
           >
             React
           </a>
-          &nbsp;by Andrew Baisden.
+          &nbsp;by Shajidur Rahman.
         </p>
         <p>
-          All Rights Reserved &reg; Copyright &copy; {currYear} Andrew Baisden.
+          All Rights Reserved &reg; Copyright &copy; {currYear} Shajidur Rahman.
         </p>
       </div>
     </>

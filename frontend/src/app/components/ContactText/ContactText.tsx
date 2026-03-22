@@ -8,9 +8,9 @@ export const ContactText = ({ ...props }: ContactTextProps) => {
     <>
       <div className="contact-text">
         <p>
-          I am open to talking about other projects, freelance and writing
+          I am open to talking about DevOps, SRE, SWE, and writing
           roles. You can reach me here at{' '}
-          <a href="mailto:info@andrewbaisden.com">info@andrewbaisden.com</a>. I
+          <a href="mailto:arnob.sre@gmail.com">arnob.sre@gmail.com</a>. I
           look forward to hearing from you!
         </p>
       </div>

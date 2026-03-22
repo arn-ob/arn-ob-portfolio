@@ -52,7 +52,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               creation, writing tips and so much more.
             </p>
             <a
-              href="https://twitter.com/andrewbaisden"
+              href="https://twitter.com/shajidurrahman"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -107,7 +107,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               connections open up so many career doors.
             </p>
             <a
-              href="https://www.linkedin.com/in/andrew-baisden/"
+              href="https://www.linkedin.com/in/shajidur-rahman/"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -157,7 +157,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               life and fun related. See what i’m up to.
             </p>
             <a
-              href="https://www.instagram.com/andrewbaisden/"
+              href="https://www.instagram.com/shajidurrahman/"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -290,7 +290,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               developer setups and anything that gets us excited!
             </p>
             <a
-              href="https://www.instagram.com/andrewbaisden_tech/"
+              href="https://www.instagram.com/shajidurrahman_tech/"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -729,7 +729,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               personal progression and tons of other interesting topics.
             </p>
             <a
-              href="https://dev.to/andrewbaisden"
+              href="https://dev.to/shajidurrahman"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -792,7 +792,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               content to my other blogs.
             </p>
             <a
-              href="https://hashnode.com/@andrewbaisden"
+              href="https://hashnode.com/@shajidurrahman"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -855,7 +855,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               really good place to post your articles.
             </p>
             <a
-              href="https://andrewbaisden.medium.com/"
+              href="https://shajidurrahman.medium.com/"
               rel="noopener noreferrer"
               target="_blank"
               className={
@@ -929,7 +929,7 @@ export const SocialMediaCarousel = ({ ...props }: SocialMediaCarouselProps) => {
               codebases. Check out my projects.
             </p>
             <a
-              href="https://github.com/andrewbaisden"
+              href="https://github.com/shajidurrahman"
               rel="noopener noreferrer"
               target="_blank"
               className={
