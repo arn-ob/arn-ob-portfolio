@@ -1,7 +1,25 @@
-.hero-bg-light-theme {
-  fill: #0384c8;
+/* Full-width hero photo; matches previous SVG stage proportions */
+.hero-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1512 / 882;
+  min-height: 16rem;
+  overflow: hidden;
 }
 
-.hero-bg-dark-theme {
-  fill: rgb(26, 26, 26);
+.hero-cover-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-cover {
+    min-height: 14rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero-cover {
+    min-height: 12rem;
+  }
 }
