@@ -40,7 +40,7 @@ export const HeroProfile = () => {
               />
             </div>
             <p className="hero-profile-tagline">
-              DevOps, SRE and SWE: cloud, Kubernetes, CI/CD and clear writing on
+              DevOps, SRE and SWE: Cloud, Kubernetes, CI/CD and clear writing on
               the stack.
             </p>
           </div>

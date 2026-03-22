@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://shajidurrahman.com/",
   },
-  title: "Shajidur Rahman - Portfolio",
+  title: "arn-ob - Portfolio",
   description:
-    "Shajidur Rahman is a Software Developer, Content Creator, and Technical Writer. Proficient in JavaScript, React, and modern infrastructure, Shajidur excels at building reliable systems and user-friendly applications.",
+    "arn-ob is a Software Developer, Content Creator, and Technical Writer. Proficient in JavaScript, React, and modern infrastructure, arn-ob excels at building reliable systems and user-friendly applications.",
   keywords: [
     "Software Developer",
     "Software Engineer",
