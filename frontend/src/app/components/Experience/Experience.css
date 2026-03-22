@@ -2,6 +2,12 @@
   scroll-margin-top: 5rem;
   margin-top: 3rem;
   padding-bottom: 1rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  box-sizing: border-box;
 }
 
 .experience-section {

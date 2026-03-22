@@ -10,7 +10,6 @@ import Experience from './components/Experience/Experience';
 import SocialMediaCarousel from './components/SocialMediaCarousel/SocialMediaCarousel';
 import SkillGroupIcons from './components/SkillGroupIcons/SkillGroupIcons';
 import ContactText from './components/ContactText/ContactText';
-import FooterText from './components/FooterText/FooterText';
 
 import { useTheme } from './context/ThemeContext';
 
@@ -26,8 +25,8 @@ const Home = () => {
 
   return (
     <>
-      <div className="container">
-        <div>
+      <div className="site-container">
+        <div className="site-inner">
           <div className="hero-container" ref={homeRef}>
             <Hero />
             <div className="hero-header-container">
@@ -44,8 +43,8 @@ const Home = () => {
               <HeroProfile />
             </div>
           </div>
-          <main>
-            <div ref={aboutRef}>
+          <main className="page-main">
+            <div ref={aboutRef} className="about-block">
               <section className="header-section">
                 <a
                   href="/#about"
@@ -59,12 +58,9 @@ const Home = () => {
                   About
                 </a>
               </section>
-              <section>
-                <div>
+              <section className="about-content">
+                <div className="about-content-text">
                   <AboutProfileText />
-                </div>
-                <div>
-                  <AboutProfileImage />
                 </div>
               </section>
             </div>

@@ -1,7 +1,16 @@
+.about-profile-text {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
 .about-profile-text p {
-	margin-bottom: 1.5rem;
-	font-size: 1.5rem;
-	font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 3.2vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.55;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* 
@@ -54,9 +63,3 @@
 	##Screen = B/w 320px to 479px
   */
 
-@media (min-width: 320px) and (max-width: 480px) {
-	/* CSS */
-	.about-profile-text p {
-		font-size: 1rem;
-	}
-}

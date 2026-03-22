@@ -151,7 +151,7 @@ header input:checked ~ nav > ul > li {
   justify-content: space-around;
   align-items: center;
   padding: 0.2rem;
-  background: #7148FC;
+  background: #ffffff00;
   position: fixed;
   width: 100%;
   z-index: 1;

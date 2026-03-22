@@ -109,11 +109,11 @@ export const Header = ({
               handleScroll(homeRef.current);
             }}
           >
-            <Image src={Logo} alt="Shajidur Rahman Logo" />
+            {/* <Image src={Logo} alt="Shajidur Rahman Logo s" /> */}
           </a>
         </div>
         <div>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
       </div>
       {/* <div className="header-mobile">

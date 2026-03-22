@@ -2,6 +2,10 @@
   color: #ffffff;
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .hero-profile {
@@ -10,12 +14,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 0 0.75rem;
+  box-sizing: border-box;
 }
 
 /* Outer card */
 .hero-profile-panel {
-  max-width: 36rem;
+  width: 100%;
+  max-width: min(36rem, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +34,7 @@
   background-color: rgba(22, 24, 34, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 
 /* Image block */
@@ -47,48 +57,70 @@
 /* Text block */
 .hero-profile-text {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 1rem 1rem 1.05rem;
   border-radius: 0.75rem;
   background-color: rgba(30, 33, 45, 0.358);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
 }
 
 .hero-profile-greeting {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
   font-weight: 500;
   margin: 0 0 0.25rem 0;
 }
 
 .hero-profile-text h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.35rem, 6vw, 2.5rem);
   font-weight: 700;
   margin: 0 0 0.65rem 0;
   line-height: 1.15;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .hero-profile-typewriter {
-  min-height: 2.65rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.hero-profile-typewriter span,
+.hero-profile-typewriter div {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: anywhere;
+  max-width: 100%;
 }
 
 .hero-profile-typewriter span {
-  font-size: 1.563rem;
+  font-size: clamp(1rem, 4.2vw, 1.563rem);
   font-weight: 500;
   margin: 0.25rem 0 0.65rem 0;
+  line-height: 1.35;
+  display: inline-block;
 }
 
 .hero-profile-tagline {
   margin: 0.5rem 0 0 0;
   padding: 0.65rem 0.6rem;
   border-radius: 0.5rem;
-  font-size: 1.05rem;
+  font-size: clamp(0.875rem, 3.5vw, 1.05rem);
   line-height: 1.45;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.92);
   background-color: rgba(18, 20, 28, 0.324);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-profile-button-light-theme {
@@ -138,14 +170,6 @@
     padding: 1.15rem 1.05rem;
   }
 
-  .hero-profile-text h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero-profile-typewriter span {
-    font-size: 1.15rem;
-  }
-
   .hero-profile-button-light-theme,
   .hero-profile-button-dark-theme {
     margin-top: 1rem;
@@ -158,18 +182,6 @@
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .hero-profile-text h1 {
-    font-size: 1.65rem;
-  }
-
-  .hero-profile-typewriter span {
-    font-size: 1.05rem;
-  }
-
-  .hero-profile-tagline {
-    font-size: 0.98rem;
-  }
-
   .hero-profile-button-light-theme,
   .hero-profile-button-dark-theme {
     margin-top: 1rem;
@@ -182,9 +194,13 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .hero-profile {
+    padding: 0 0.5rem;
+  }
+
   .hero-profile-panel {
-    padding: 1rem 0.85rem;
-    gap: 0.85rem;
+    padding: 0.9rem 0.65rem 0.85rem;
+    gap: 0.75rem;
   }
 
   .hero-profile-avatar-wrap {
@@ -192,28 +208,21 @@
   }
 
   .hero-profile-avatar {
-    width: 5rem !important;
+    width: 4.75rem !important;
+    max-width: 100%;
+    height: auto !important;
   }
 
   .hero-profile-text {
-    padding: 0.85rem 0.75rem;
+    padding: 0.75rem 0.65rem;
   }
 
-  .hero-profile-greeting {
-    font-size: 1.05rem;
-  }
-
-  .hero-profile-text h1 {
-    font-size: 1.45rem;
-  }
-
-  .hero-profile-typewriter span {
-    font-size: 1rem;
+  .hero-profile-typewriter {
+    min-height: 2.75rem;
   }
 
   .hero-profile-tagline {
-    font-size: 0.9rem;
-    padding: 0.55rem 0.5rem;
+    padding: 0.5rem 0.45rem;
   }
 
   .hero-profile-button-light-theme,

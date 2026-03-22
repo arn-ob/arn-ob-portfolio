@@ -47,8 +47,8 @@
 .social-media-carousel-slide-graphic {
   flex: 1;
   /* background: url(../../img/carousel-graphic-bg.svg) no-repeat; */
-  background-size: 100%;
-  height: 100%;
+  /* background-size: 50%; */
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,6 +103,15 @@
 .carousel-root {
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.carousel.carousel-slider,
+.carousel .slider-wrapper {
+  width: 100% !important;
+  max-width: 100%;
 }
 
 .carousel .thumbs-wrapper {
@@ -162,7 +171,7 @@
   }
 
   .social-media-carousel-slide-graphic {
-    width: 100%;
+    width: 50%;
     padding: 2rem;
   }
 }
@@ -220,12 +229,16 @@
   */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  /* CSS */
   .social-media-carousel-slide-light-theme,
   .social-media-carousel-slide-dark-theme {
     flex-flow: column nowrap;
-    height: 60rem;
-    padding: 2rem;
+    height: auto;
+    min-height: 22rem;
+    max-height: none;
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .social-media-carousel-slide-graphic {
@@ -258,12 +271,16 @@
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  /* CSS */
   .social-media-carousel-slide-light-theme,
   .social-media-carousel-slide-dark-theme {
     flex-flow: column nowrap;
-    height: 60rem;
-    padding: 2rem;
+    height: auto;
+    min-height: 20rem;
+    max-height: none;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .social-media-carousel-slide-graphic {
@@ -275,7 +292,7 @@
   }
   .social-media-carousel-slide-content p {
     font-size: 1rem;
-    padding: 1rem;
+    padding: 10px;
   }
   .carousel-button-light-theme,
   .carousel-button-dark-theme {

@@ -27,6 +27,72 @@
 
 html {
   font-size: var(--main-font-size);
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+.site-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+.site-inner {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.page-main {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.about-block {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.about-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  width: 100%;
+  max-width: min(90rem, 100%);
+  margin: 0 auto;
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+}
+
+.about-content-text,
+.about-content-image {
+  flex: 1 1 18rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.about-content-image {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .about-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-content-text,
+  .about-content-image {
+    flex: 1 1 auto;
+    width: 100%;
+  }
 }
 
 body,
@@ -48,6 +114,7 @@ body {
   color: var(--color-text-primary);
   font-family: var(--main-font-family);
   transition: background 0.25s ease-in-out;
+  overflow-x: clip;
 }
 
 .hero-container {
@@ -59,16 +126,37 @@ body {
   top: 0%;
   left: 0%;
   width: 100%;
+  z-index: 2;
 }
 
 .hero-bio-container {
   width: 100%;
   position: absolute;
   top: 10rem;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
-main {
+main,
+.page-main {
   padding: 2rem;
+}
+
+@media (max-width: 1023px) {
+  main,
+  .page-main {
+    padding: 1.5rem max(1rem, env(safe-area-inset-left)) 2rem
+      max(1rem, env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 480px) {
+  main,
+  .page-main {
+    padding: 1.15rem max(0.75rem, env(safe-area-inset-left)) 1.75rem
+      max(0.75rem, env(safe-area-inset-right));
+  }
 }
 
 .about-section {
@@ -79,28 +167,38 @@ main {
 
 .header-section {
   text-align: center;
-  margin: 2rem 0 2rem 0;
+  margin: clamp(1.25rem, 4vw, 2rem) 0;
+  padding: 0 0.5rem;
 }
 
 .header-title-light {
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 3.125rem;
+  font-size: clamp(1.75rem, 8vw, 3.125rem);
   font-weight: 300;
+  line-height: 1.1;
   color: var(--main-font-color);
+  word-wrap: break-word;
 }
 
 .header-title-dark {
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 3.125rem;
+  font-size: clamp(1.75rem, 8vw, 3.125rem);
   font-weight: 300;
+  line-height: 1.1;
   color: var(--brand-color-white);
+  word-wrap: break-word;
 }
 
 .skills-section {
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0 0.25rem;
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -117,6 +215,9 @@ main {
 .contact-section {
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .footer-light-theme {
@@ -189,13 +290,24 @@ main {
 	##Screen = B/w 481px to 767px
   */
 
-@media (min-width: 481px) and (max-width: 767px) {
-  /* CSS */
-  .hero-bio-container {
-    width: 100%;
-    position: absolute;
-    top: 7rem;
+/* Tablet + phone: hero bio in document flow so content doesn’t overlap <main> */
+@media (max-width: 1023px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
   }
+
+  .hero-bio-container {
+    position: relative;
+    top: auto;
+    margin-top: clamp(-3.5rem, -10vw, -1.25rem);
+    padding: 0 max(0.75rem, env(safe-area-inset-left)) 1.5rem
+      max(0.75rem, env(safe-area-inset-right));
+    z-index: 1;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
   .about-section {
     display: flex;
     flex-flow: column-reverse nowrap;
@@ -209,12 +321,12 @@ main {
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  /* CSS */
   .hero-bio-container {
-    width: 100%;
-    position: absolute;
-    top: 7rem;
+    margin-top: clamp(-2.75rem, -12vw, -0.75rem);
+    padding: 0 max(0.5rem, env(safe-area-inset-left)) 1.25rem
+      max(0.5rem, env(safe-area-inset-right));
   }
+
   .about-section {
     display: flex;
     flex-flow: column-reverse nowrap;

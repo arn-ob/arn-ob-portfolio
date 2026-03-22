@@ -15,6 +15,7 @@ export const HeroProfile = () => {
               alt="Shajidur Rahman Profile"
               width={100}
               height={100}
+              sizes="(max-width: 480px) 76px, 100px"
             />
           </div>
           <div className="hero-profile-text">
