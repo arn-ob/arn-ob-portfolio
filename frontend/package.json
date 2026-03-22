@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:out": "next build",
     "start:out": "serve -s out",
     "start": "next start",
     "start:ssr": "next start -p 3000",
