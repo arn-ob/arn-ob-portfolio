@@ -1,13 +1,11 @@
 import Image from 'next/image';
 import './Hero.css';
 
-import heroCover from '../../img/hero-cover.jpg';
-
 export const Hero = () => {
   return (
     <div className="hero-cover">
       <Image
-        src={heroCover}
+        src={'/hero-cover.jpg'}
         alt="Mountain valley with forested slopes and clouds"
         fill
         priority

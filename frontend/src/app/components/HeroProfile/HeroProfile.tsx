@@ -11,7 +11,7 @@ export const HeroProfile = () => {
           <div className="hero-profile-avatar-wrap">
             <Image
               className="hero-profile-avatar"
-              src={profilePictureHero}
+              src={'/arnob.jpg'}
               alt="Shajidur Rahman Profile"
               width={100}
               height={100}
